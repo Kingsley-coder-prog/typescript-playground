@@ -11,3 +11,21 @@ let NumberOrNull: number | null;
 NumberOrNull = 3;
 NumberOrNull = null;
 console.log(NumberOrNull);
+
+// Functions
+
+// Regular functions
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+// Arrow functions
+const newAdd = (a: number, b: number): number => {
+  return a + b;
+};
+newAdd(5, 6);
+
+const crdd = (a: number, b: number) => {
+  return a * b;
+};
+crdd(2, 4);
