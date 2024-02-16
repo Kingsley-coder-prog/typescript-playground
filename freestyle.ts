@@ -131,3 +131,22 @@ class Dog extends Animal {
 
 const myDog: Dog = new Dog("Rex");
 myDog.speak();
+
+// Interface
+interface Dog {
+  name: string;
+  age: number;
+  vaccinated?: boolean;
+}
+
+interface Car {
+  model: string;
+  year: number;
+}
+
+let myCar: Car = {
+  model: "Camry",
+  year: 2023
+};
+
+console.log(`${myCar.year} ${myCar.model}`);
