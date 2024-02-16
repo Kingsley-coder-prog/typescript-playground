@@ -95,3 +95,39 @@ console.log(pets.includes("fish"));
 // Array Length
 let newPets: string[] = ["cat", "dog", "bird"];
 console.log(newPets.length);
+
+// Logical Operators
+const isHome = true;
+const inPajamas = false;
+const wantsToEat = false;
+const isBored = false;
+
+const shouldGoOutside = isHome && !inPajamas && (wantsToEat || isBored);
+
+// Comparison operators
+const number = 5;
+const checkBetween = number > 5 && number < 7;
+// const numberIsNotZero = number !== 0;
+
+// Classes
+
+class Animal {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  speak(): void {
+    console.log(`${this.name} make a nosie`);
+  }
+}
+
+class Dog extends Animal {
+  speak(): void {
+    console.log(`${this.name} barks`);
+  }
+}
+
+const myDog: Dog = new Dog("Rex");
+myDog.speak();
