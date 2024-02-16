@@ -64,3 +64,34 @@ for (let key in person) {
   //   console.log(key);
   console.log(key, person[key]);
 }
+
+// Arrays
+let personArray: string[] = ["Alice", "Bob", "Carol"];
+let humanArray: Array<number> = [1, 2, 3, 4, 5];
+
+// console.log(personArray.push("John"));
+// console.log(personArray);
+// console.log(personArray.unshift("John"));
+// console.log(personArray);
+// console.log(personArray.pop());
+// console.log(personArray);
+// console.log(personArray.shift());
+// console.log(personArray);
+
+// Accessing and Modifying Elements
+let newFruits: string[] = ["apple", "orange", "grape"];
+console.log(newFruits[1]);
+newFruits[1] = "banana";
+console.log(newFruits);
+
+// Finding Elements
+let pets: string[] = ["cat", "dog", "bird"];
+console.log(pets.indexOf("cat"));
+console.log(pets.indexOf("dog"));
+console.log(pets.indexOf("fish"));
+console.log(pets.includes("cat"));
+console.log(pets.includes("fish"));
+
+// Array Length
+let newPets: string[] = ["cat", "dog", "bird"];
+console.log(newPets.length);
