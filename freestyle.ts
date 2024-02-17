@@ -150,3 +150,19 @@ let myCar: Car = {
 };
 
 console.log(`${myCar.year} ${myCar.model}`);
+
+// Modules
+
+// import {newadd} from './math'
+
+// You can also export default  export
+export default function Component(): string {
+  return "hello!";
+}
+
+// Type Assertion
+let someValue: any = "This is a string";
+let strLength: number = (<string>someValue).length;
+let strLengthAs: number = (someValue as string).length;
+// console.log(strLengthAs);
+console.log(strLength);
