@@ -238,3 +238,14 @@ function getValueFromDict(key: string, dict: MyDictionary): string | number | un
 
 const dict = { name: "Alice", age: 30 };
 console.log(getValueFromDict("name", dict));
+
+// Literal Types
+function sortOrderMessage(order: "ascending" | "descending"): string {
+  if (order === "ascending") return "This order is ascending";
+  else {
+    return "This order is descending";
+  }
+}
+
+console.log(sortOrderMessage("ascending"));
+console.log(sortOrderMessage("descending"));
