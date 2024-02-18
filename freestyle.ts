@@ -171,3 +171,15 @@ console.log(strLength);
 let myPerson = { name: "John", age: 16 };
 type Person = typeof myPerson;
 type PersonKeys = keyof Person;
+
+// Union and Intersection
+type myCar = { type: "car"; doors: number };
+type Bike = { type: "bike"; hasBell: boolean };
+
+type Vehicle = myCar | Bike;
+
+function indentifyVehicle(vehicle: Vehicle): string {
+  return vehicle.type;
+}
+const result = indentifyVehicle({ type: "bike", hasBell: true });
+console.log(result);
