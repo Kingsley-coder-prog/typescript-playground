@@ -186,3 +186,36 @@ console.log(result);
 
 // Conditonal type
 type TypeName<T> = T extends string ? "string" : T extends number ? "number" : T extends boolean ? "boolean" : "object";
+
+// Enum Type
+enum Color {
+  Red,
+  Green,
+  Blue
+}
+let c: Color = Color.Red;
+let b: Color = Color.Green;
+let d: Color = Color.Blue;
+console.log(c, b, d);
+
+enum Days {
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat"
+}
+
+function classifyDays(day: Days) {
+  switch (day) {
+    case Days.Sat:
+    case Days.Sun:
+      return "weekends";
+    default:
+      return "weekdays";
+  }
+}
+console.log(classifyDays(Days.Mon));
+console.log(classifyDays(Days.Sun));
