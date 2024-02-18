@@ -219,3 +219,10 @@ function classifyDays(day: Days) {
 }
 console.log(classifyDays(Days.Mon));
 console.log(classifyDays(Days.Sun));
+
+// Generic
+function wrapInArray<T>(value: T): T[] {
+  return [value];
+}
+
+console.log(wrapInArray(42));
