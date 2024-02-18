@@ -166,3 +166,8 @@ let strLength: number = (<string>someValue).length;
 let strLengthAs: number = (someValue as string).length;
 // console.log(strLengthAs);
 console.log(strLength);
+
+// keyof and typeof
+let myPerson = { name: "John", age: 16 };
+type Person = typeof myPerson;
+type PersonKeys = keyof Person;
