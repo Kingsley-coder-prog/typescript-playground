@@ -183,3 +183,6 @@ function indentifyVehicle(vehicle: Vehicle): string {
 }
 const result = indentifyVehicle({ type: "bike", hasBell: true });
 console.log(result);
+
+// Conditonal type
+type TypeName<T> = T extends string ? "string" : T extends number ? "number" : T extends boolean ? "boolean" : "object";
