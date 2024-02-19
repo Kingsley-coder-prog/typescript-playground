@@ -249,3 +249,65 @@ function sortOrderMessage(order: "ascending" | "descending"): string {
 
 console.log(sortOrderMessage("ascending"));
 console.log(sortOrderMessage("descending"));
+
+
+// Discriminated Unions
+// interface Circle {
+//   kind: "circle";
+//   radius: number;
+// }
+
+// interface Square {
+//   kind: "square";
+//   sideLength: number;
+// }
+
+// type Shape = Circle | Square
+
+// const shapes: Shape[] = [
+//   {
+//     kind: "circle",
+//     radius: 5
+//   },
+//   {
+//     kind: "square",
+//     sideLength: 10
+//   }
+// ]
+
+// const context = ...
+// shapes.forEach((shape: Shape) => {
+//   switch (shape.kind) {
+//     case "circle":
+//       context.drawCircle(shape.radius);
+//       break;
+//     case "square":
+//       context.drawSquare(shape.sideLength);
+//       break
+//   }
+// })
+
+// Exercise on Discriminated Union
+interface Circle {
+  kind: "circle";
+  radius: number;
+}
+
+interface Square {
+  kind: "square";
+  sideLength: number;
+}
+
+type Shape = Circle | Square
+
+function calculateArea(shape: Shape): number {
+  switch(shape.kind) {
+    case "circle":
+      return Math.PI * shape.radius ** 2
+    case "square":
+      return shape.sideLength ** 2
+  }
+}
+
+console.log(calculateArea({kind: "circle", radius: 2}))
+console.log(calculateArea({kind: "square", sideLength: 3}))
