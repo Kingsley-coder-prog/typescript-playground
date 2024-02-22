@@ -311,3 +311,103 @@ function calculateArea(shape: Shape): number {
 
 console.log(calculateArea({kind: "circle", radius: 2}))
 console.log(calculateArea({kind: "square", sideLength: 3}))
+
+// Mixins
+// Disposable mixxins
+class Disposable {
+  isDisposed: boolean = false
+  dispose() {
+    this.isDisposed = true
+  }
+}
+
+class Activatable {
+  isActive: boolean = false
+  activate() {
+    this.isActive = true
+  }
+  deactivate() {
+    this.isActive = false
+  }
+}
+
+// class SmartObject implements Disposable, Activatable {
+  
+//   constructor() {
+//     setInterval(() => console.log(`Active: ${this.isActive}, Disposed: ${this.isDisposed}`) , 500)
+//   }
+
+//   interact() {
+//     this.activate()
+//   }
+
+//   isDisposed: boolean = false
+//   dispose(): void;
+// }
+
+// applyMixins(SmartObject, [Disposable, Activatable])
+
+
+// Namespaces
+namespace Geometry {
+  export function areaOfTriangle(width: number, height: number): number {
+    return width * height
+  }
+  export function areaOfCircle(radius: number): number {
+    return Math.PI * radius ** 2
+  }
+}
+
+
+// Tuples
+let hsla: [number, string, string, number]
+hsla = [200, '100%', '50%', 1]
+
+let xy: [number, number]
+xy = [34.7, 20.1]
+
+function useCoords(): [number, number] {
+  // get coords
+  let lat = 100
+  let long = 50
+
+  return [lat, long]
+}
+
+const [lat, long] = useCoords()
+
+
+// Named Tuples
+let user: [name: string, age: number]
+
+user = ['peach', 25]
+console.log(user)
+
+// Interfaces
+
+interface Author {
+  name: string
+  age: number
+}
+
+const authorOne: Author  = {
+  name: 'mario',
+  age: 25
+
+}
+
+interface Post {
+  title: string
+  body: string
+  tags: string[]
+  creat_at: Date
+  author: Author
+}
+
+const newPost: Post = {
+  title: 'my first post',
+  body: 'something intresting',
+  tags: ['gaming', 'tech'],
+  creat_at: new Date(),
+  author: authorOne
+}
