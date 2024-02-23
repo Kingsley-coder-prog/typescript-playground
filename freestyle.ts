@@ -387,7 +387,7 @@ console.log(user)
 
 interface Author {
   name: string
-  age: number
+  age: number | null
 }
 
 const authorOne: Author  = {
