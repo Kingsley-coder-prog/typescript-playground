@@ -369,7 +369,7 @@ xy = [34.7, 20.1]
 function useCoords(): [number, number] {
   // get coords
   let lat = 100
-  let long = 50
+  let long = 55
 
   return [lat, long]
 }
