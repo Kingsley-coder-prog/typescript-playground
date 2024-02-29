@@ -189,11 +189,11 @@ type TypeName<T> = T extends string ? "string" : T extends number ? "number" : T
 
 // Enum Type
 enum Color {
-  Red,
+  Yello,
   Green,
   Blue
 }
-let c: Color = Color.Red;
+let c: Color = Color.Yello;
 let b: Color = Color.Green;
 let d: Color = Color.Blue;
 console.log(c, b, d);
