@@ -157,7 +157,7 @@ console.log(`${myCar.year} ${myCar.model}`);
 
 // You can also export default  export
 export default function Component(): string {
-  return "hellow!";
+  return "hello!";
 }
 
 // Type Assertion
