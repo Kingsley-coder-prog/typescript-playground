@@ -105,7 +105,7 @@ const isBored = false;
 const shouldGoOutside = isHome && !inPajamas && (wantsToEat || isBored);
 
 // Comparison operators
-const number = 5;
+const number = 8;
 const checkBetween = number > 5 && number < 7;
 // const numberIsNotZero = number !== 0;
 
